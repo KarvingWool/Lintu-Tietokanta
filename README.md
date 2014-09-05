@@ -1,4 +1,2 @@
 Lintu-Tietokanta
 ================
-
-hehheh
