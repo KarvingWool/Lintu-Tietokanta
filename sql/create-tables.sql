@@ -6,7 +6,7 @@ elinymparisto_Elinymparisto varchar(30) primary key
 );
 
 CREATE TABLE Laji (
-Laji_lajinimi varchar(30) primary key,
+laji_lajinimi varchar(30) primary key,
 laji_latina varchar(30) not null,
 laji_parimaara int,
 laji_lasna varchar(7)
@@ -20,21 +20,23 @@ kayttaja_sahkoposti varchar(30)
 );
 
 CREATE TABLE LajinAlueet (
-lajinalueet_laji varchar(30) primary key,
-lajinalueet_alue varchar(30) primary key,
-FOREIGN KEY(lajinalueet_alue) references Esiintymisalue(esiintymisalue_alue),
-FOREIGN KEY(lajinalueet_laji) references Laji(laji_laji)
+lajinalueet_laji varchar(30),
+lajinalueet_alue varchar(30),
+PRIMARY KEY(lajinalueet_laji, lajinalueet_alue),
+FOREIGN KEY(lajinalueet_alue) references Esiintymisalue(esiintymisalue_Alue),
+FOREIGN KEY(lajinalueet_laji) references Laji(laji_lajinimi)
 );
 
 CREATE TABLE LajinElinymparisto (
-lajinelinymparisto_laji varchar(30) primary key,
-lajinelinymparisto_elinymparisto varchar(30) primary key,
-FOREIGN KEY(elinymparisto_alue) references Elinymparisto(elinymparisto_elinymparisto),
-FOREIGN KEY(lajinelinymparisto_laji) references Laji(laji_laji)
+LajinElinymparisto_laji varchar(30),
+LajinElinymparisto_elinymparisto varchar(30),
+PRIMARY KEY(LajinElinymparisto_laji, LajinElinymparisto_elinymparisto),
+FOREIGN KEY(LajinElinymparisto_elinymparisto) references Elinymparisto(elinymparisto_elinymparisto),
+FOREIGN KEY(LajinElinymparisto_laji) references Laji(laji_lajinimi)
 );
 
 CREATE TABLE Havainto (
-havainto_havaintoID serial primary key,
+havainto_havaintoID serial UNIQUE,
 havainto_laji varchar(30) not null,
 havainto_PVM date not null,
 havainto_aika time not null,
@@ -44,7 +46,8 @@ havainto_paikantarkennus varchar(200),
 havainto_havainnontekijannimi varchar(30)  not null,
 havainto_havainnontekijantunnus varchar(32) not null,
 havainto_pesa boolean not null,
-FOREIGN KEY(havainto_laji) references laji(laji_laji),
+PRIMARY KEY(havainto_havaintoID),
+FOREIGN KEY(havainto_laji) references laji(laji_lajinimi),
 FOREIGN KEY(havainto_havainnontekijantunnus) references kayttaja(kayttaja_kayttajatunnus)
 );
 

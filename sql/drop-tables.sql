@@ -1,13 +1,13 @@
 DROP TABLE LajinAlueet;
 
-DROP TABLE LajienElinympariso;
+DROP TABLE LajinElinymparisto;
 
 DROP TABLE Havainto;
 
-DROP TABLE Esiintymisalue;
+DROP TABLE Esiintymisalue CASCADE;
 
-DROP TABLE Elinymparisto;
+DROP TABLE Elinymparisto CASCADE;
 
-DROP TABLE Laji;
+DROP TABLE Laji CASCADE;
 
-DROP TABLE Kayttaja;
+DROP TABLE Kayttaja CASCADE;
