@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Havainnot</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href="../css/bootstrap.css" rel="stylesheet">
+        <link href="../css/bootstrap-theme.css" rel="stylesheet">
+        <link href="../css/main.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2">
+                    <h3>Navigation</h3>
+                    <div class="panel panel-default">
+                        <ul class="nav">
+                            <li><a href="demo.html">Etusivu</a></li>
+                            <li><a href="kirjautuminen.html">Kirjaudu</a></li>
+                            <li><a href="laji-tietokanta.html">Lajit</a></li>
+                            <li class="active"><a href="havainto-tietokanta.html">Havainnot</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="col-md-6">
+                        <h3>Search Parameters</h3>
+                        <input class="form-control input-sm" type="text" placeholder="Laji">
+                        <input class="form-control input-sm" type="date" placeholder="Havainto Jälkeen">
+                        <input class="form-control input-sm" type="text" placeholder="Paikkakunta">
+                        <h3>Sort By</h3>
+                        <div class="checkbox">
+                            <label class="radio-inline">
+                                <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> Laji
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> PVM
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> Paikkakunta
+                            </label>
+                        </div>
+                        <h1>Havaintoja</h1>
+                        <table class="table table-stripped">
+                            <thead>
+                                <tr>
+                                    <th>Laji</th>
+                                    <th>PVM</th>
+                                    <th>Aika</th>
+                                    <th>Paikkakunta</th>
+                                    <th>Lukumäärä</th>
+                                    <th>Havainnontekijä</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Sinisorsa</td>
+                                    <td>11-09-2013</td>
+                                    <td>11:20</td>
+                                    <td>Hausjärvi</td>
+                                    <td>12</td>
+                                    <td>joku1</td>
+                                </tr>
+                                <tr>
+                                    <td>Kurki</td>
+                                    <td>01-02-2014</td>
+                                    <td>16:00</td>
+                                    <td>Helsinki</td>
+                                    <td>1</td>
+                                    <td>kayttaja4</td>
+                                </tr>
+                                <tr>
+                                    <td>Maakotka</td>
+                                    <td>01-04-2014</td>
+                                    <td>12:00</td>
+                                    <td>Kokkola</td>
+                                    <td>2</td>
+                                    <td>ruotsiftw</td>
+                                </tr>
+                                <tr>
+                                    <td>Käenpiika</td>
+                                    <td>05-09-2014</td>
+                                    <td>18:40</td>
+                                    <td>Savonlinna</td>
+                                    <td>4</td>
+                                    <td>HuiLaiLee</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

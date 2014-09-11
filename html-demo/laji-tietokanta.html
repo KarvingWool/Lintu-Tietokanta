@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lajit</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href="../css/bootstrap.css" rel="stylesheet">
+        <link href="../css/bootstrap-theme.css" rel="stylesheet">
+        <link href="../css/main.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2">
+                    <h3>Navigation</h3>
+                    <div class="panel panel-default">
+                        <ul class="nav">
+                            <li><a href="demo.html">Etusivu</a></li>
+                            <li><a href="kirjautuminen.html">Kirjaudu</a></li>
+                            <li class="active"><a href="laji-tietokanta.html">Lajit</a></li>
+                            <li><a href="havainto-tietokanta.html">Havainnot</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="container">
+                    <h3>Search Parameters</h3>
+                    <div class="col-md-6">
+                        <input class="form-control input-sm" type="text" placeholder="Laji">
+                        <input class="form-control input-sm" type="text" placeholder="Latinankielinen nimi">
+                        <input class="form-control input-sm" type="text" placeholder="Läsnä suomessa 'I-XII'">
+                        <input class="form-control input-sm" type="text" placeholder="Elinympäristö">
+
+                        <h3>Sort By</h3>
+                        <div class="checkbox">
+                            <label class="radio-inline">
+                                <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> Laji
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Parimäärä
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> Latinankielinen Nimi
+                            </label>
+                        </div>
+                        <h1>Lajit</h1>
+                        <table class="table table-stripped">
+                            <thead>
+                                <tr>
+                                    <th>Laji</th>
+                                    <th>Latinankielinen Nimi</th>
+                                    <th>Parimäärä</th>
+                                    <th>Suomessa</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Sinisorsa</td>
+                                    <td>Sorsamus jokapaikkamax</td>
+                                    <td>200000</td>
+                                    <td>I-XII</td>
+                                </tr>
+                                <tr>
+                                    <td>Kurki</td>
+                                    <td>Grux panlux</td>
+                                    <td>5000</td>
+                                    <td>III-IX</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

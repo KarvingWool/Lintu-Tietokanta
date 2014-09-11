@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Kirjautuminen</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href="../css/bootstrap.css" rel="stylesheet">
+        <link href="../css/bootstrap-theme.css" rel="stylesheet">
+        <link href="../css/main.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2">
+                    <h3>Navigation</h3>
+                    <div class="panel panel-default">
+                        <ul class="nav">
+                            <li><a href="demo.html">Etusivu</a></li>
+                            <li class="active"><a href="kirjautuminen.html">Kirjaudu</a></li>
+                            <li><a href="laji-tietokanta.html">Lajit</a></li>
+                            <li><a href="havainto-tietokanta.html">Havainnot</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h1>Kirjautuminen</h1>
+                    <form class="form-horizontal" role="form" action="lomake.html" method="POST">
+                        <div class="form-group">
+                            <label for="inputEmail1" class="col-md-2 control-label">E-mail</label>
+                            <div class="col-md-10">
+                                <input type="email" class="form-control" id="inputEmail1" name="email" placeholder="Email">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPassword1" class="col-md-2 control-label">Password</label>
+                            <div class="col-md-10">
+                                <input type="password" class="form-control" id="inputPassword1" name="password" placeholder="Password">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-offset-2 col-md-10">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox"> Muista minut
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-offset-2 col-md-10">
+                                <button type="submit" class="btn btn-default">Kirjaudu sisään</button>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
