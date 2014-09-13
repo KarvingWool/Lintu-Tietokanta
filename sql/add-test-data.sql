@@ -8,10 +8,10 @@ INSERT INTO Laji
 values ('Kurki', 'Lolitus puki', '5000', 'III-IX');
 
 INSERT INTO Kayttaja
-VALUES ('xvax', TRUE, 'Jesse Vaisanen', 'pilipali@fin.fi');
+VALUES ('xvax', 'asdf', TRUE, 'Jesse Vaisanen', 'pilipali@fin.fi');
 
 INSERT INTO Kayttaja
-VALUES ('lulu', FALSE, 'MERJA MARJA', 'pup@jap.fi');
+VALUES ('lulu', 'lulu1', FALSE, 'MERJA MARJA', 'pup@jap.fi');
 
 INSERT INTO Esiintymisalue
 VALUES ('Etela-Suomi');

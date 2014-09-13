@@ -14,6 +14,7 @@ laji_lasna varchar(7)
 
 CREATE TABLE Kayttaja (
 kayttaja_kayttajatunnus varchar(32) primary key,
+kayttaja_salasana varchar(32) not null,
 kayttaja_yllapitaja boolean not null,
 kayttaja_nimi varchar(50) not null,
 kayttaja_sahkoposti varchar(30)

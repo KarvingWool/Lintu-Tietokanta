@@ -16,19 +16,14 @@ class Kayttaja {
         $this->yllapitaja = $yllapitaja;
     }
 
-    public function getKayttajat() {
-        $sql = "SELECT kayttajatunnus, salasana, yllapitaja, nimi, sahkoposti from Kayttaja";
+    public static function getKayttajat() {
+        $sql = "SELECT kayttaja_kayttajatunnus, kayttaja_salasana, kayttaja_yllapitaja, kayttaja_nimi, kayttaja_sahkoposti from Kayttaja";
         $kysely = getTietokantayhteys()->prepare($sql);
         $kysely->execute();
 
         $tulokset = array();
         foreach ($kysely->fetchAll(PDO::FETCH_OBJ) as $tulos) {
-            $kayttaja = new Kayttaja();
-            $kayttaja->setNimi($tulos->nimi);
-            $kayttaja->setTunnus($tulos->kayttajatunnus);
-            $kayttaja->setSalanana($tulos->salasana);
-            $kayttaja->setSahkoposti($tulos->sahkoposti);
-            $kayttaja->setYllapitaja($tulos->yllapitaja);
+            $kayttaja = new Kayttaja($tulos->kayttaja_nimi, $tulos->kayttaja_kayttajatunnus, $tulos->kayttaja_salasana, $tulos->kayttaja_sahkoposti, $tulos->kayttaja_yllapitaja);
             
 
             //$array[] = $muuttuja; lisää muuttujan arrayn perään. 
