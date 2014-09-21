@@ -32,6 +32,23 @@ class Kayttaja {
         }
         return $tulokset;
     }
+    
+    public static function estiKayttajaTunnuksilla($kayttaja, $salasana){
+        $sql = "SELECT kayttaja_kayttajatunnus, kayttaja_salasana, kayttaja_yllapitaja, 
+            kayttaja_nimi, kayttaja_sahkoposti from Kayttaja
+            where kayttaja_kayttajatunnus = 'xvax' AND kayttaja_salasana = 'asdf' LIMIT 1";
+        $kysely = getTietokantayhteys()->prepare($sql);
+        $kysely->execute;
+        
+        $tulos = $kysely->fetchObject();
+        if(is_null($tulos)){
+            return null;
+        } else {
+            $kayttaja = new Kayttaja($tulos->kayttaja_nimi, $tulos->kayttaja_kayttajatunnus, $tulos->kayttaja_salasana, $tulos->kayttaja_sahkoposti, $tulos->kayttaja_yllapitaja);
+            
+            return $kayttaja;
+        }
+    }
 
     public function getNimi(){
         return $this->nimi;
